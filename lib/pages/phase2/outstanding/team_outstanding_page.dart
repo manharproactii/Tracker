@@ -191,95 +191,95 @@ class _TeamOutstandingPageState extends State<TeamOutstandingPage> {
                                 SizedBox(height: 20,),
                               ],),
                           ) : Container(),
-                          asc.data.kdm.isNotEmpty ? Container(
-                            padding: EdgeInsets.all(5),
-                            child: Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    border: Border.all(color: Colors.white),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                          child: Container(
-                                            child: Text('Sr. No.',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                      Expanded(
-                                          child: Container(
-                                            child: Text('KDM', style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                      Expanded(
-                                          flex: 2,
-                                          child: Container(
-                                            child: Text('Outstanding',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                for(int i = 0; i<asi.data.kdm.length;i++)
-                                  Container(
-                                    margin: EdgeInsets.only(left: 10, right: 10),
-                                    height: 50,
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Expanded(
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                color: bg,
-                                                border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                              ),
-                                              child: Text("${asc.data.kdm[i].srNo}", style: content1,
-                                                textAlign: TextAlign.center,),
-                                              //width: 150,
-                                              //height: 52,
-                                              //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                                              alignment: Alignment.center,
-                                            )
-                                        ),
-                                        Expanded(
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                              ),
-                                              child: Text("${asc.data.kdm[i].kdm}", style: content1,
-                                                textAlign: TextAlign.center,),
-                                              alignment: Alignment.center,
-                                            )
-                                        ),
-                                        Expanded(
-                                            flex: 2,
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                              ),
-                                              child: Text("${asc.data.kdm[i].outStanding}", style: content,
-                                                textAlign: TextAlign.center,),
-                                              alignment: Alignment.center,
-                                            )
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                SizedBox(height: 20,),
-                              ],),
-                          ) : Container(),
+                          // asc.data.kdm.isNotEmpty ? Container(
+                          //   padding: EdgeInsets.all(5),
+                          //   child: Column(
+                          //     children: [
+                          //       Container(
+                          //         margin: EdgeInsets.only(left: 10, right: 10),
+                          //         height: 50,
+                          //         decoration: BoxDecoration(
+                          //           color: Colors.green,
+                          //           border: Border.all(color: Colors.white),
+                          //         ),
+                          //         child: Row(
+                          //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //           children: [
+                          //             Expanded(
+                          //                 child: Container(
+                          //                   child: Text('Sr. No.',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //             Expanded(
+                          //                 child: Container(
+                          //                   child: Text('KDM', style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //             Expanded(
+                          //                 flex: 2,
+                          //                 child: Container(
+                          //                   child: Text('Outstanding',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //           ],
+                          //         ),
+                          //       ),
+                          //       for(int i = 0; i<asi.data.kdm.length;i++)
+                          //         Container(
+                          //           margin: EdgeInsets.only(left: 10, right: 10),
+                          //           height: 50,
+                          //           child: Row(
+                          //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //             children: [
+                          //               Expanded(
+                          //                   child: Container(
+                          //                     decoration: BoxDecoration(
+                          //                       color: bg,
+                          //                       border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //                     ),
+                          //                     child: Text("${asc.data.kdm[i].srNo}", style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     //width: 150,
+                          //                     //height: 52,
+                          //                     //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          //                     alignment: Alignment.center,
+                          //                   )
+                          //               ),
+                          //               Expanded(
+                          //                   child: Container(
+                          //                     decoration: BoxDecoration(
+                          //                       border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //                     ),
+                          //                     child: Text("${asc.data.kdm[i].kdm}", style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                   )
+                          //               ),
+                          //               Expanded(
+                          //                   flex: 2,
+                          //                   child: Container(
+                          //                     decoration: BoxDecoration(
+                          //                       border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //                     ),
+                          //                     child: Text("${asc.data.kdm[i].outStanding}", style: content,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                   )
+                          //               ),
+                          //             ],
+                          //           ),
+                          //         ),
+                          //       SizedBox(height: 20,),
+                          //     ],),
+                          // ) : Container(),
                         ]
                     ),
                   );
@@ -299,7 +299,8 @@ class DescriptionView extends StatefulWidget {
 }
 
 class _DescriptionViewState extends State<DescriptionView> {
-  List<String> _detailTypes = ['ICD', 'CFS'];
+  // List<String> _detailTypes = ['ICD', 'CFS'];
+  List<String> _detailTypes = ['ICD'];
   PageController _pageController;
   List<double> _heights;
   int _currentPage = 0;
@@ -346,7 +347,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           child: _currentPage == i ?
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             child: Center(
                               child: Text('${_detailTypes[i]}', style: optionStyle, textAlign: TextAlign.center,),
@@ -354,7 +355,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           ) :
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             margin: EdgeInsets.only(left: 8),
                             //color: footer1,

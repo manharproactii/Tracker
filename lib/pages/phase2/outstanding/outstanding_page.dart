@@ -46,7 +46,8 @@ class _OutStandingPageState extends State<OutStandingPage> {
     setState(() {
       totalICD = result['outstandings']['Outstanding'];
       totalCFS = result1['outstandings']['Outstanding'];
-      total = int.parse(totalICD.replaceAll(",", "")) + int.parse(totalCFS.replaceAll(",", ""));
+      // total = int.parse(totalICD.replaceAll(",", "")) + int.parse(totalCFS.replaceAll(",", ""));
+      total = int.parse(totalICD.replaceAll(",", ""));
       print("total outstanding $totalICD $totalCFS $total");
       final usd = Currency.create('IND',0);
       costPrice = Money.fromIntWithCurrency(total, usd);
@@ -122,7 +123,7 @@ class _OutStandingPageState extends State<OutStandingPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              height: 155,
+              height: 105,
               alignment: Alignment.center,
               margin: const EdgeInsets.symmetric(horizontal: 8),
               padding: EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),
@@ -186,30 +187,30 @@ class _OutStandingPageState extends State<OutStandingPage> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("CFS",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.montserrat(
-                                textStyle: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,))
-                        ),
-                        Text("$totalCFS",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.montserrat(
-                                textStyle: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,))
-                        ),
-                      ],
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: EdgeInsets.symmetric(vertical: 10),
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //     children: [
+                  //       Text("CFS",
+                  //           textAlign: TextAlign.center,
+                  //           style: GoogleFonts.montserrat(
+                  //               textStyle: TextStyle(
+                  //                 fontSize: 20,
+                  //                 fontWeight: FontWeight.w500,
+                  //                 color: Colors.black,))
+                  //       ),
+                  //       Text("$totalCFS",
+                  //           textAlign: TextAlign.center,
+                  //           style: GoogleFonts.montserrat(
+                  //               textStyle: TextStyle(
+                  //                 fontSize: 20,
+                  //                 fontWeight: FontWeight.w500,
+                  //                 color: Colors.black,))
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
             ),

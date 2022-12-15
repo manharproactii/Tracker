@@ -94,1166 +94,1167 @@ class _BillingPageState extends State<BillingPage> {
                   return Container(
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     alignment: Alignment.topCenter,
-                    child:  Container(
-                      child: Column(
-                        children: [
-                          SizedBox(height: 20),
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            child: HorizontalDataTable(
-                              leftHandSideColumnWidth: 100,
-                              rightHandSideColumnWidth: 800,
-                              isFixedHeader: true,
-                              headerWidgets:[
-                                Container(
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      border: Border.all(color: Colors.white),),
-                                    child: Container(
-                                      child: Text('Month',
-                                        style: content1,
-                                        textAlign: TextAlign.center,),
-                                      alignment: Alignment.center,)),
-                                // Expanded(
-                                //   child: Container(
-                                //     height: 50,
-                                //     decoration: BoxDecoration(
-                                //       color: Colors.green,
-                                //       border: Border.all(color: Colors.white),
-                                //     ),
-                                //     child: Row(
-                                //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                //       mainAxisSize: MainAxisSize.min,
-                                //       children: [
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('Import', style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('Export',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('Bond',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('Domestic',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('MNR',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('MISC',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('Credit',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //         Expanded(
-                                //           child: Container(
-                                //             child: Text('Total',
-                                //               style: content1,
-                                //               textAlign: TextAlign.center,),
-                                //             alignment: Alignment.center,
-                                //           ),
-                                //         ),
-                                //       ],
-                                //     ),
-                                //   ),
-                                // ),
-
-                                Container(
-                                  height: 50,
-                                  // decoration: BoxDecoration(
-                                  //   color: Colors.green,
-                                  //   border: Border.all(color: Colors.white),
-                                  // ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    // mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Container(
-                                        child: Text('Import', style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('Export',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('Bond',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('Domestic',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('MNR',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('MISC',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('Credit',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Text('Total',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                        width: 100,
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border(
-                                              right: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              top:  BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                              bottom: BorderSide( //                   <--- right side
-                                                color: Colors.white,
-                                              ),
-                                            )
-                                          // border: Border.all(color: Colors.white),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-
-
-                              ],
-                              leftSideItemBuilder: _generateFirstColumnRow1,
-                              rightSideItemBuilder: _generateRightHandSideColumnRow1,
-                              itemCount: asc.data.billingDmrActivityWise.length,
-                              rightHandSideColBackgroundColor: Colors.black,
-                              leftHandSideColBackgroundColor: Colors.black,
-                            ),
-                          ),
-                          // Container(
-                          //   alignment: Alignment.center,
-                          //   padding: EdgeInsets.only(left: 20, right: 20),
-                          //   color: Colors.transparent,
-                          //   height: 50,
-                          //   child: Text(
-                          //     'Billing DMR Month Wise',
-                          //     textAlign: TextAlign.center,
-                          //     style: headingBar,
-                          //   ),
-                          // ),
-                          // Container(
-                          //   height: 50,
-                          //   //padding: EdgeInsets.only(left: 2, right: 2),
-                          //   //margin: EdgeInsets.only(left: 2, right: 2),
-                          //   decoration: BoxDecoration(
-                          //     color: Colors.green,
-                          //     border: Border.all(color: Colors.white),
-                          //   ),
-                          //   child: Row(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //     children: [
-                          //       Expanded(
-                          //           flex: 2,
-                          //           child: Container(
-                          //             child: Text('Month',
-                          //               style: content1,
-                          //               textAlign: TextAlign.center,),
-                          //             alignment: Alignment.center,
-                          //           )
-                          //       ),
-                          //       Expanded(
-                          //           child: Container(
-                          //             child: Text('Total', style: content1,
-                          //               textAlign: TextAlign.center,),
-                          //             alignment: Alignment.center,
-                          //           )
-                          //       ),
-                          //       Expanded(
-                          //           flex: 2,
-                          //           child: Container(
-                          //             child: Text('AsonDate',
-                          //               style: content1,
-                          //               textAlign: TextAlign.center,),
-                          //             alignment: Alignment.center,
-                          //           )
-                          //       ),
-                          //       Expanded(
-                          //           flex: 2,
-                          //           child: Container(
-                          //             child: Text('AsonMonth',
-                          //               style: content1,
-                          //               textAlign: TextAlign.center,),
-                          //             alignment: Alignment.center,
-                          //           )
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
-                          // for(int i = 0; i<asc.data.billingDmrMonthWise.length;i++)
-                          //   Container(
-                          //     height: 50,
-                          //     //padding: EdgeInsets.only(left: 2, right: 2),
-                          //     //margin: EdgeInsets.only(left: 2, right: 2),
-                          //     child: Row(
-                          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //       children: [
-                          //         Expanded(
-                          //             flex: 2,
-                          //             child: Container(
-                          //               decoration: BoxDecoration(
-                          //                 color: bg,
-                          //                 border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                          //               ),
-                          //               child: Text("${asc.data.billingDmrMonthWise[i].displayMonth}", style: content1,
-                          //                 textAlign: TextAlign.center,),
-                          //               //width: 100,
-                          //               //height: 52,
-                          //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                          //               alignment: Alignment.center,
-                          //             )
-                          //         ),
-                          //         Expanded(
-                          //             child: Container(
-                          //               decoration: BoxDecoration(
-                          //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                          //               ),
-                          //               child: Text("${asc.data.billingDmrMonthWise[i].total}", style: content1,
-                          //                 textAlign: TextAlign.center,),
-                          //               //width: 100,
-                          //               //height: 52,
-                          //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                          //               alignment: Alignment.center,
-                          //             )
-                          //         ),
-                          //         Expanded(
-                          //             flex: 2,
-                          //             child: Container(
-                          //               decoration: BoxDecoration(
-                          //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                          //               ),
-                          //               child: Text("${asc.data.billingDmrMonthWise[i].asOnDate}", style: content1,
-                          //                 textAlign: TextAlign.center,),
-                          //               //width: 150,
-                          //               //height: 52,
-                          //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                          //               alignment: Alignment.center,
-                          //             )
-                          //         ),
-                          //         Expanded(
-                          //             flex: 2,
-                          //             child: Container(
-                          //               decoration: BoxDecoration(
-                          //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                          //               ),
-                          //               child: Text("${asc.data.billingDmrMonthWise[i].asOnMonth}", style: content1,
-                          //                 textAlign: TextAlign.center,),
-                          //               //width: 150,
-                          //               //height: 52,
-                          //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                          //               alignment: Alignment.center,
-                          //             )
-                          //         ),
-                          //       ],
-                          //     ),
-                          //   ),
-                          SizedBox(height: 20,),
-                        ],
-                      ),
-                    ),
-
-                    // DescriptionView(
-                    //     children : [
+                    child:
+                    // Container(
+                    //   child: Column(
+                    //     children: [
+                    //       SizedBox(height: 20),
                     //       Container(
-                    //         child: Column(
-                    //           children: [
-                    //             SizedBox(height: 20),
+                    //         height: MediaQuery.of(context).size.height,
+                    //         child: HorizontalDataTable(
+                    //           leftHandSideColumnWidth: 100,
+                    //           rightHandSideColumnWidth: 800,
+                    //           isFixedHeader: true,
+                    //           headerWidgets:[
                     //             Container(
-                    //               height: MediaQuery.of(context).size.height,
-                    //               child: HorizontalDataTable(
-                    //                 leftHandSideColumnWidth: 100,
-                    //                 rightHandSideColumnWidth: 800,
-                    //                 isFixedHeader: true,
-                    //                 headerWidgets:[
-                    //                   Container(
-                    //                       height: 50,
-                    //                       decoration: BoxDecoration(
-                    //                         color: Colors.green,
-                    //                         border: Border.all(color: Colors.white),),
-                    //                       child: Container(
-                    //                         child: Text('Month',
-                    //                           style: content1,
-                    //                           textAlign: TextAlign.center,),
-                    //                         alignment: Alignment.center,)),
-                    //                   // Expanded(
-                    //                   //   child: Container(
-                    //                   //     height: 50,
-                    //                   //     decoration: BoxDecoration(
-                    //                   //       color: Colors.green,
-                    //                   //       border: Border.all(color: Colors.white),
-                    //                   //     ),
-                    //                   //     child: Row(
-                    //                   //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //                   //       mainAxisSize: MainAxisSize.min,
-                    //                   //       children: [
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Import', style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Export',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Bond',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Domestic',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('MNR',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('MISC',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Credit',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Total',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //       ],
-                    //                   //     ),
-                    //                   //   ),
-                    //                   // )
-                    //
-                    //               Container(
                     //                 height: 50,
-                    //                 // decoration: BoxDecoration(
-                    //                 //   color: Colors.green,
-                    //                 //   border: Border.all(color: Colors.white),
-                    //                 // ),
-                    //                 child: Row(
-                    //                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //                   // mainAxisSize: MainAxisSize.min,
-                    //                   children: [
-                    //                     Container(
-                    //                       child: Text('Import', style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('Export',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('Bond',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('Domestic',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('MNR',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('MISC',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('Credit',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                     Container(
-                    //                       child: Text('Total',
-                    //                         style: content1,
-                    //                         textAlign: TextAlign.center,),
-                    //                       alignment: Alignment.center,
-                    //                       width: 100,
-                    //                       decoration: const BoxDecoration(
-                    //                           color: Colors.green,
-                    //                           border: Border(
-                    //                             right: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             top:  BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                             bottom: BorderSide( //                   <--- right side
-                    //                               color: Colors.white,
-                    //                             ),
-                    //                           )
-                    //                         // border: Border.all(color: Colors.white),
-                    //                       ),
-                    //                     ),
-                    //                   ],
-                    //                 ),
-                    //               ),],
-                    //                 leftSideItemBuilder: _generateFirstColumnRow,
-                    //                 rightSideItemBuilder: _generateRightHandSideColumnRow,
-                    //                 itemCount: asi.data.billingDmrActivityWise.length,
-                    //                 rightHandSideColBackgroundColor: Colors.black,
-                    //                 leftHandSideColBackgroundColor: Colors.black,
-                    //               ),
-                    //             ),
-                    //             SizedBox(height: 20,),
-                    //           ],
-                    //         ),
-                    //       ),
-                    //       Container(
-                    //         child: Column(
-                    //           children: [
-                    //             SizedBox(height: 20),
-                    //             Container(
-                    //               height: MediaQuery.of(context).size.height,
-                    //               child: HorizontalDataTable(
-                    //                 leftHandSideColumnWidth: 100,
-                    //                 rightHandSideColumnWidth: 800,
-                    //                 isFixedHeader: true,
-                    //                 headerWidgets:[
-                    //                   Container(
-                    //                       height: 50,
-                    //                       decoration: BoxDecoration(
-                    //                         color: Colors.green,
-                    //                         border: Border.all(color: Colors.white),),
-                    //                       child: Container(
-                    //                         child: Text('Month',
-                    //                           style: content1,
-                    //                           textAlign: TextAlign.center,),
-                    //                         alignment: Alignment.center,)),
-                    //                   // Expanded(
-                    //                   //   child: Container(
-                    //                   //     height: 50,
-                    //                   //     decoration: BoxDecoration(
-                    //                   //       color: Colors.green,
-                    //                   //       border: Border.all(color: Colors.white),
-                    //                   //     ),
-                    //                   //     child: Row(
-                    //                   //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //                   //       mainAxisSize: MainAxisSize.min,
-                    //                   //       children: [
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Import', style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Export',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Bond',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Domestic',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('MNR',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('MISC',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Credit',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //         Expanded(
-                    //                   //           child: Container(
-                    //                   //             child: Text('Total',
-                    //                   //               style: content1,
-                    //                   //               textAlign: TextAlign.center,),
-                    //                   //             alignment: Alignment.center,
-                    //                   //           ),
-                    //                   //         ),
-                    //                   //       ],
-                    //                   //     ),
-                    //                   //   ),
-                    //                   // ),
-                    //
-                    //                   Container(
-                    //                     height: 50,
-                    //                     // decoration: BoxDecoration(
-                    //                     //   color: Colors.green,
-                    //                     //   border: Border.all(color: Colors.white),
-                    //                     // ),
-                    //                     child: Row(
-                    //                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //                       // mainAxisSize: MainAxisSize.min,
-                    //                       children: [
-                    //                         Container(
-                    //                           child: Text('Import', style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                             color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                 color: Colors.white,
-                    //                               ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                 color: Colors.white,
-                    //                               ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('Export',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('Bond',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('Domestic',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('MNR',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('MISC',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('Credit',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                         Container(
-                    //                           child: Text('Total',
-                    //                             style: content1,
-                    //                             textAlign: TextAlign.center,),
-                    //                           alignment: Alignment.center,
-                    //                           width: 100,
-                    //                           decoration: const BoxDecoration(
-                    //                               color: Colors.green,
-                    //                               border: Border(
-                    //                                 right: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 top:  BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                                 bottom: BorderSide( //                   <--- right side
-                    //                                   color: Colors.white,
-                    //                                 ),
-                    //                               )
-                    //                             // border: Border.all(color: Colors.white),
-                    //                           ),
-                    //                         ),
-                    //                       ],
-                    //                     ),
-                    //                   ),
-                    //
-                    //
-                    //                 ],
-                    //                 leftSideItemBuilder: _generateFirstColumnRow1,
-                    //                 rightSideItemBuilder: _generateRightHandSideColumnRow1,
-                    //                 itemCount: asc.data.billingDmrActivityWise.length,
-                    //                 rightHandSideColBackgroundColor: Colors.black,
-                    //                 leftHandSideColBackgroundColor: Colors.black,
-                    //               ),
-                    //             ),
-                    //             // Container(
-                    //             //   alignment: Alignment.center,
-                    //             //   padding: EdgeInsets.only(left: 20, right: 20),
-                    //             //   color: Colors.transparent,
-                    //             //   height: 50,
-                    //             //   child: Text(
-                    //             //     'Billing DMR Month Wise',
-                    //             //     textAlign: TextAlign.center,
-                    //             //     style: headingBar,
-                    //             //   ),
-                    //             // ),
-                    //             // Container(
-                    //             //   height: 50,
-                    //             //   //padding: EdgeInsets.only(left: 2, right: 2),
-                    //             //   //margin: EdgeInsets.only(left: 2, right: 2),
-                    //             //   decoration: BoxDecoration(
-                    //             //     color: Colors.green,
-                    //             //     border: Border.all(color: Colors.white),
-                    //             //   ),
-                    //             //   child: Row(
-                    //             //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //             //     children: [
-                    //             //       Expanded(
-                    //             //           flex: 2,
-                    //             //           child: Container(
-                    //             //             child: Text('Month',
-                    //             //               style: content1,
-                    //             //               textAlign: TextAlign.center,),
-                    //             //             alignment: Alignment.center,
-                    //             //           )
-                    //             //       ),
-                    //             //       Expanded(
-                    //             //           child: Container(
-                    //             //             child: Text('Total', style: content1,
-                    //             //               textAlign: TextAlign.center,),
-                    //             //             alignment: Alignment.center,
-                    //             //           )
-                    //             //       ),
-                    //             //       Expanded(
-                    //             //           flex: 2,
-                    //             //           child: Container(
-                    //             //             child: Text('AsonDate',
-                    //             //               style: content1,
-                    //             //               textAlign: TextAlign.center,),
-                    //             //             alignment: Alignment.center,
-                    //             //           )
-                    //             //       ),
-                    //             //       Expanded(
-                    //             //           flex: 2,
-                    //             //           child: Container(
-                    //             //             child: Text('AsonMonth',
-                    //             //               style: content1,
-                    //             //               textAlign: TextAlign.center,),
-                    //             //             alignment: Alignment.center,
-                    //             //           )
-                    //             //       ),
-                    //             //     ],
-                    //             //   ),
-                    //             // ),
-                    //             // for(int i = 0; i<asc.data.billingDmrMonthWise.length;i++)
-                    //             //   Container(
+                    //                 decoration: BoxDecoration(
+                    //                   color: Colors.green,
+                    //                   border: Border.all(color: Colors.white),),
+                    //                 child: Container(
+                    //                   child: Text('Month',
+                    //                     style: content1,
+                    //                     textAlign: TextAlign.center,),
+                    //                   alignment: Alignment.center,)),
+                    //             // Expanded(
+                    //             //   child: Container(
                     //             //     height: 50,
-                    //             //     //padding: EdgeInsets.only(left: 2, right: 2),
-                    //             //     //margin: EdgeInsets.only(left: 2, right: 2),
+                    //             //     decoration: BoxDecoration(
+                    //             //       color: Colors.green,
+                    //             //       border: Border.all(color: Colors.white),
+                    //             //     ),
                     //             //     child: Row(
                     //             //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //             //       mainAxisSize: MainAxisSize.min,
                     //             //       children: [
                     //             //         Expanded(
-                    //             //             flex: 2,
-                    //             //             child: Container(
-                    //             //               decoration: BoxDecoration(
-                    //             //                 color: bg,
-                    //             //                 border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                    //             //               ),
-                    //             //               child: Text("${asc.data.billingDmrMonthWise[i].displayMonth}", style: content1,
-                    //             //                 textAlign: TextAlign.center,),
-                    //             //               //width: 100,
-                    //             //               //height: 52,
-                    //             //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                    //             //               alignment: Alignment.center,
-                    //             //             )
+                    //             //           child: Container(
+                    //             //             child: Text('Import', style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
                     //             //         ),
                     //             //         Expanded(
-                    //             //             child: Container(
-                    //             //               decoration: BoxDecoration(
-                    //             //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                    //             //               ),
-                    //             //               child: Text("${asc.data.billingDmrMonthWise[i].total}", style: content1,
-                    //             //                 textAlign: TextAlign.center,),
-                    //             //               //width: 100,
-                    //             //               //height: 52,
-                    //             //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                    //             //               alignment: Alignment.center,
-                    //             //             )
+                    //             //           child: Container(
+                    //             //             child: Text('Export',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
                     //             //         ),
                     //             //         Expanded(
-                    //             //             flex: 2,
-                    //             //             child: Container(
-                    //             //               decoration: BoxDecoration(
-                    //             //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                    //             //               ),
-                    //             //               child: Text("${asc.data.billingDmrMonthWise[i].asOnDate}", style: content1,
-                    //             //                 textAlign: TextAlign.center,),
-                    //             //               //width: 150,
-                    //             //               //height: 52,
-                    //             //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                    //             //               alignment: Alignment.center,
-                    //             //             )
+                    //             //           child: Container(
+                    //             //             child: Text('Bond',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
                     //             //         ),
                     //             //         Expanded(
-                    //             //             flex: 2,
-                    //             //             child: Container(
-                    //             //               decoration: BoxDecoration(
-                    //             //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                    //             //               ),
-                    //             //               child: Text("${asc.data.billingDmrMonthWise[i].asOnMonth}", style: content1,
-                    //             //                 textAlign: TextAlign.center,),
-                    //             //               //width: 150,
-                    //             //               //height: 52,
-                    //             //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                    //             //               alignment: Alignment.center,
-                    //             //             )
+                    //             //           child: Container(
+                    //             //             child: Text('Domestic',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
+                    //             //         ),
+                    //             //         Expanded(
+                    //             //           child: Container(
+                    //             //             child: Text('MNR',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
+                    //             //         ),
+                    //             //         Expanded(
+                    //             //           child: Container(
+                    //             //             child: Text('MISC',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
+                    //             //         ),
+                    //             //         Expanded(
+                    //             //           child: Container(
+                    //             //             child: Text('Credit',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
+                    //             //         ),
+                    //             //         Expanded(
+                    //             //           child: Container(
+                    //             //             child: Text('Total',
+                    //             //               style: content1,
+                    //             //               textAlign: TextAlign.center,),
+                    //             //             alignment: Alignment.center,
+                    //             //           ),
                     //             //         ),
                     //             //       ],
                     //             //     ),
                     //             //   ),
-                    //             SizedBox(height: 20,),
+                    //             // ),
+                    //
+                    //             Container(
+                    //               height: 50,
+                    //               // decoration: BoxDecoration(
+                    //               //   color: Colors.green,
+                    //               //   border: Border.all(color: Colors.white),
+                    //               // ),
+                    //               child: Row(
+                    //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //                 // mainAxisSize: MainAxisSize.min,
+                    //                 children: [
+                    //                   Container(
+                    //                     child: Text('Import', style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('Export',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('Bond',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('Domestic',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('MNR',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('MISC',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('Credit',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                   Container(
+                    //                     child: Text('Total',
+                    //                       style: content1,
+                    //                       textAlign: TextAlign.center,),
+                    //                     alignment: Alignment.center,
+                    //                     width: 100,
+                    //                     decoration: const BoxDecoration(
+                    //                         color: Colors.green,
+                    //                         border: Border(
+                    //                           right: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           top:  BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                           bottom: BorderSide( //                   <--- right side
+                    //                             color: Colors.white,
+                    //                           ),
+                    //                         )
+                    //                       // border: Border.all(color: Colors.white),
+                    //                     ),
+                    //                   ),
+                    //                 ],
+                    //               ),
+                    //             ),
+                    //
+                    //
                     //           ],
+                    //           leftSideItemBuilder: _generateFirstColumnRow1,
+                    //           rightSideItemBuilder: _generateRightHandSideColumnRow1,
+                    //           itemCount: asc.data.billingDmrActivityWise.length,
+                    //           rightHandSideColBackgroundColor: Colors.black,
+                    //           leftHandSideColBackgroundColor: Colors.black,
                     //         ),
                     //       ),
-                    //     ]
+                    //       // Container(
+                    //       //   alignment: Alignment.center,
+                    //       //   padding: EdgeInsets.only(left: 20, right: 20),
+                    //       //   color: Colors.transparent,
+                    //       //   height: 50,
+                    //       //   child: Text(
+                    //       //     'Billing DMR Month Wise',
+                    //       //     textAlign: TextAlign.center,
+                    //       //     style: headingBar,
+                    //       //   ),
+                    //       // ),
+                    //       // Container(
+                    //       //   height: 50,
+                    //       //   //padding: EdgeInsets.only(left: 2, right: 2),
+                    //       //   //margin: EdgeInsets.only(left: 2, right: 2),
+                    //       //   decoration: BoxDecoration(
+                    //       //     color: Colors.green,
+                    //       //     border: Border.all(color: Colors.white),
+                    //       //   ),
+                    //       //   child: Row(
+                    //       //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //       //     children: [
+                    //       //       Expanded(
+                    //       //           flex: 2,
+                    //       //           child: Container(
+                    //       //             child: Text('Month',
+                    //       //               style: content1,
+                    //       //               textAlign: TextAlign.center,),
+                    //       //             alignment: Alignment.center,
+                    //       //           )
+                    //       //       ),
+                    //       //       Expanded(
+                    //       //           child: Container(
+                    //       //             child: Text('Total', style: content1,
+                    //       //               textAlign: TextAlign.center,),
+                    //       //             alignment: Alignment.center,
+                    //       //           )
+                    //       //       ),
+                    //       //       Expanded(
+                    //       //           flex: 2,
+                    //       //           child: Container(
+                    //       //             child: Text('AsonDate',
+                    //       //               style: content1,
+                    //       //               textAlign: TextAlign.center,),
+                    //       //             alignment: Alignment.center,
+                    //       //           )
+                    //       //       ),
+                    //       //       Expanded(
+                    //       //           flex: 2,
+                    //       //           child: Container(
+                    //       //             child: Text('AsonMonth',
+                    //       //               style: content1,
+                    //       //               textAlign: TextAlign.center,),
+                    //       //             alignment: Alignment.center,
+                    //       //           )
+                    //       //       ),
+                    //       //     ],
+                    //       //   ),
+                    //       // ),
+                    //       // for(int i = 0; i<asc.data.billingDmrMonthWise.length;i++)
+                    //       //   Container(
+                    //       //     height: 50,
+                    //       //     //padding: EdgeInsets.only(left: 2, right: 2),
+                    //       //     //margin: EdgeInsets.only(left: 2, right: 2),
+                    //       //     child: Row(
+                    //       //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //       //       children: [
+                    //       //         Expanded(
+                    //       //             flex: 2,
+                    //       //             child: Container(
+                    //       //               decoration: BoxDecoration(
+                    //       //                 color: bg,
+                    //       //                 border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                    //       //               ),
+                    //       //               child: Text("${asc.data.billingDmrMonthWise[i].displayMonth}", style: content1,
+                    //       //                 textAlign: TextAlign.center,),
+                    //       //               //width: 100,
+                    //       //               //height: 52,
+                    //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    //       //               alignment: Alignment.center,
+                    //       //             )
+                    //       //         ),
+                    //       //         Expanded(
+                    //       //             child: Container(
+                    //       //               decoration: BoxDecoration(
+                    //       //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                    //       //               ),
+                    //       //               child: Text("${asc.data.billingDmrMonthWise[i].total}", style: content1,
+                    //       //                 textAlign: TextAlign.center,),
+                    //       //               //width: 100,
+                    //       //               //height: 52,
+                    //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    //       //               alignment: Alignment.center,
+                    //       //             )
+                    //       //         ),
+                    //       //         Expanded(
+                    //       //             flex: 2,
+                    //       //             child: Container(
+                    //       //               decoration: BoxDecoration(
+                    //       //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                    //       //               ),
+                    //       //               child: Text("${asc.data.billingDmrMonthWise[i].asOnDate}", style: content1,
+                    //       //                 textAlign: TextAlign.center,),
+                    //       //               //width: 150,
+                    //       //               //height: 52,
+                    //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    //       //               alignment: Alignment.center,
+                    //       //             )
+                    //       //         ),
+                    //       //         Expanded(
+                    //       //             flex: 2,
+                    //       //             child: Container(
+                    //       //               decoration: BoxDecoration(
+                    //       //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                    //       //               ),
+                    //       //               child: Text("${asc.data.billingDmrMonthWise[i].asOnMonth}", style: content1,
+                    //       //                 textAlign: TextAlign.center,),
+                    //       //               //width: 150,
+                    //       //               //height: 52,
+                    //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    //       //               alignment: Alignment.center,
+                    //       //             )
+                    //       //         ),
+                    //       //       ],
+                    //       //     ),
+                    //       //   ),
+                    //       SizedBox(height: 20,),
+                    //     ],
+                    //   ),
                     // ),
+
+                    DescriptionView(
+                        children : [
+                          Container(
+                            child: Column(
+                              children: [
+                                SizedBox(height: 20),
+                                Container(
+                                  height: MediaQuery.of(context).size.height,
+                                  child: HorizontalDataTable(
+                                    leftHandSideColumnWidth: 100,
+                                    rightHandSideColumnWidth: 800,
+                                    isFixedHeader: true,
+                                    headerWidgets:[
+                                      Container(
+                                          height: 50,
+                                          decoration: BoxDecoration(
+                                            color: Colors.green,
+                                            border: Border.all(color: Colors.white),),
+                                          child: Container(
+                                            child: Text('Month',
+                                              style: content1,
+                                              textAlign: TextAlign.center,),
+                                            alignment: Alignment.center,)),
+                                      // Expanded(
+                                      //   child: Container(
+                                      //     height: 50,
+                                      //     decoration: BoxDecoration(
+                                      //       color: Colors.green,
+                                      //       border: Border.all(color: Colors.white),
+                                      //     ),
+                                      //     child: Row(
+                                      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      //       mainAxisSize: MainAxisSize.min,
+                                      //       children: [
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('Import', style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('Export',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('Bond',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('Domestic',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('MNR',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('MISC',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('Credit',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('Total',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //       ],
+                                      //     ),
+                                      //   ),
+                                      // )
+
+                                  Container(
+                                    height: 50,
+                                    // decoration: BoxDecoration(
+                                    //   color: Colors.green,
+                                    //   border: Border.all(color: Colors.white),
+                                    // ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      // mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Container(
+                                          child: Text('Import', style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('Export',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('Bond',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('Domestic',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('MNR',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('MISC',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('Credit',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Text('Total',
+                                            style: content1,
+                                            textAlign: TextAlign.center,),
+                                          alignment: Alignment.center,
+                                          width: 100,
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              border: Border(
+                                                right: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                top:  BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                                bottom: BorderSide( //                   <--- right side
+                                                  color: Colors.white,
+                                                ),
+                                              )
+                                            // border: Border.all(color: Colors.white),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),],
+                                    leftSideItemBuilder: _generateFirstColumnRow,
+                                    rightSideItemBuilder: _generateRightHandSideColumnRow,
+                                    itemCount: asi.data.billingDmrActivityWise.length,
+                                    rightHandSideColBackgroundColor: Colors.black,
+                                    leftHandSideColBackgroundColor: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 20,),
+                              ],
+                            ),
+                          ),
+                          // Container(
+                          //   child: Column(
+                          //     children: [
+                          //       SizedBox(height: 20),
+                          //       Container(
+                          //         height: MediaQuery.of(context).size.height,
+                          //         child: HorizontalDataTable(
+                          //           leftHandSideColumnWidth: 100,
+                          //           rightHandSideColumnWidth: 800,
+                          //           isFixedHeader: true,
+                          //           headerWidgets:[
+                          //             Container(
+                          //                 height: 50,
+                          //                 decoration: BoxDecoration(
+                          //                   color: Colors.green,
+                          //                   border: Border.all(color: Colors.white),),
+                          //                 child: Container(
+                          //                   child: Text('Month',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,)),
+                          //             // Expanded(
+                          //             //   child: Container(
+                          //             //     height: 50,
+                          //             //     decoration: BoxDecoration(
+                          //             //       color: Colors.green,
+                          //             //       border: Border.all(color: Colors.white),
+                          //             //     ),
+                          //             //     child: Row(
+                          //             //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //             //       mainAxisSize: MainAxisSize.min,
+                          //             //       children: [
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('Import', style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('Export',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('Bond',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('Domestic',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('MNR',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('MISC',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('Credit',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //         Expanded(
+                          //             //           child: Container(
+                          //             //             child: Text('Total',
+                          //             //               style: content1,
+                          //             //               textAlign: TextAlign.center,),
+                          //             //             alignment: Alignment.center,
+                          //             //           ),
+                          //             //         ),
+                          //             //       ],
+                          //             //     ),
+                          //             //   ),
+                          //             // ),
+                          //
+                          //             Container(
+                          //               height: 50,
+                          //               // decoration: BoxDecoration(
+                          //               //   color: Colors.green,
+                          //               //   border: Border.all(color: Colors.white),
+                          //               // ),
+                          //               child: Row(
+                          //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //                 // mainAxisSize: MainAxisSize.min,
+                          //                 children: [
+                          //                   Container(
+                          //                     child: Text('Import', style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                       color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                           color: Colors.white,
+                          //                         ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                           color: Colors.white,
+                          //                         ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('Export',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('Bond',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('Domestic',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('MNR',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('MISC',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('Credit',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                   Container(
+                          //                     child: Text('Total',
+                          //                       style: content1,
+                          //                       textAlign: TextAlign.center,),
+                          //                     alignment: Alignment.center,
+                          //                     width: 100,
+                          //                     decoration: const BoxDecoration(
+                          //                         color: Colors.green,
+                          //                         border: Border(
+                          //                           right: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           top:  BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                           bottom: BorderSide( //                   <--- right side
+                          //                             color: Colors.white,
+                          //                           ),
+                          //                         )
+                          //                       // border: Border.all(color: Colors.white),
+                          //                     ),
+                          //                   ),
+                          //                 ],
+                          //               ),
+                          //             ),
+                          //
+                          //
+                          //           ],
+                          //           leftSideItemBuilder: _generateFirstColumnRow1,
+                          //           rightSideItemBuilder: _generateRightHandSideColumnRow1,
+                          //           itemCount: asc.data.billingDmrActivityWise.length,
+                          //           rightHandSideColBackgroundColor: Colors.black,
+                          //           leftHandSideColBackgroundColor: Colors.black,
+                          //         ),
+                          //       ),
+                          //       // Container(
+                          //       //   alignment: Alignment.center,
+                          //       //   padding: EdgeInsets.only(left: 20, right: 20),
+                          //       //   color: Colors.transparent,
+                          //       //   height: 50,
+                          //       //   child: Text(
+                          //       //     'Billing DMR Month Wise',
+                          //       //     textAlign: TextAlign.center,
+                          //       //     style: headingBar,
+                          //       //   ),
+                          //       // ),
+                          //       // Container(
+                          //       //   height: 50,
+                          //       //   //padding: EdgeInsets.only(left: 2, right: 2),
+                          //       //   //margin: EdgeInsets.only(left: 2, right: 2),
+                          //       //   decoration: BoxDecoration(
+                          //       //     color: Colors.green,
+                          //       //     border: Border.all(color: Colors.white),
+                          //       //   ),
+                          //       //   child: Row(
+                          //       //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //       //     children: [
+                          //       //       Expanded(
+                          //       //           flex: 2,
+                          //       //           child: Container(
+                          //       //             child: Text('Month',
+                          //       //               style: content1,
+                          //       //               textAlign: TextAlign.center,),
+                          //       //             alignment: Alignment.center,
+                          //       //           )
+                          //       //       ),
+                          //       //       Expanded(
+                          //       //           child: Container(
+                          //       //             child: Text('Total', style: content1,
+                          //       //               textAlign: TextAlign.center,),
+                          //       //             alignment: Alignment.center,
+                          //       //           )
+                          //       //       ),
+                          //       //       Expanded(
+                          //       //           flex: 2,
+                          //       //           child: Container(
+                          //       //             child: Text('AsonDate',
+                          //       //               style: content1,
+                          //       //               textAlign: TextAlign.center,),
+                          //       //             alignment: Alignment.center,
+                          //       //           )
+                          //       //       ),
+                          //       //       Expanded(
+                          //       //           flex: 2,
+                          //       //           child: Container(
+                          //       //             child: Text('AsonMonth',
+                          //       //               style: content1,
+                          //       //               textAlign: TextAlign.center,),
+                          //       //             alignment: Alignment.center,
+                          //       //           )
+                          //       //       ),
+                          //       //     ],
+                          //       //   ),
+                          //       // ),
+                          //       // for(int i = 0; i<asc.data.billingDmrMonthWise.length;i++)
+                          //       //   Container(
+                          //       //     height: 50,
+                          //       //     //padding: EdgeInsets.only(left: 2, right: 2),
+                          //       //     //margin: EdgeInsets.only(left: 2, right: 2),
+                          //       //     child: Row(
+                          //       //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //       //       children: [
+                          //       //         Expanded(
+                          //       //             flex: 2,
+                          //       //             child: Container(
+                          //       //               decoration: BoxDecoration(
+                          //       //                 color: bg,
+                          //       //                 border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //       //               ),
+                          //       //               child: Text("${asc.data.billingDmrMonthWise[i].displayMonth}", style: content1,
+                          //       //                 textAlign: TextAlign.center,),
+                          //       //               //width: 100,
+                          //       //               //height: 52,
+                          //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          //       //               alignment: Alignment.center,
+                          //       //             )
+                          //       //         ),
+                          //       //         Expanded(
+                          //       //             child: Container(
+                          //       //               decoration: BoxDecoration(
+                          //       //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //       //               ),
+                          //       //               child: Text("${asc.data.billingDmrMonthWise[i].total}", style: content1,
+                          //       //                 textAlign: TextAlign.center,),
+                          //       //               //width: 100,
+                          //       //               //height: 52,
+                          //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          //       //               alignment: Alignment.center,
+                          //       //             )
+                          //       //         ),
+                          //       //         Expanded(
+                          //       //             flex: 2,
+                          //       //             child: Container(
+                          //       //               decoration: BoxDecoration(
+                          //       //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //       //               ),
+                          //       //               child: Text("${asc.data.billingDmrMonthWise[i].asOnDate}", style: content1,
+                          //       //                 textAlign: TextAlign.center,),
+                          //       //               //width: 150,
+                          //       //               //height: 52,
+                          //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          //       //               alignment: Alignment.center,
+                          //       //             )
+                          //       //         ),
+                          //       //         Expanded(
+                          //       //             flex: 2,
+                          //       //             child: Container(
+                          //       //               decoration: BoxDecoration(
+                          //       //                 border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                          //       //               ),
+                          //       //               child: Text("${asc.data.billingDmrMonthWise[i].asOnMonth}", style: content1,
+                          //       //                 textAlign: TextAlign.center,),
+                          //       //               //width: 150,
+                          //       //               //height: 52,
+                          //       //               //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          //       //               alignment: Alignment.center,
+                          //       //             )
+                          //       //         ),
+                          //       //       ],
+                          //       //     ),
+                          //       //   ),
+                          //       SizedBox(height: 20,),
+                          //     ],
+                          //   ),
+                          // ),
+                        ]
+                    ),
                   );
                 }
             );
@@ -1508,7 +1509,8 @@ class DescriptionView extends StatefulWidget {
 }
 
 class _DescriptionViewState extends State<DescriptionView> {
-  List<String> _detailTypes = ['ICD', 'CFS'];
+  // List<String> _detailTypes = ['ICD', 'CFS'];
+  List<String> _detailTypes = ['ICD'];
   PageController _pageController;
   List<double> _heights;
   int _currentPage = 0;
@@ -1555,7 +1557,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           child: _currentPage == i ?
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             child: Center(
                               child: Text('${_detailTypes[i]}', style: optionStyle, textAlign: TextAlign.center,),
@@ -1563,7 +1565,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           ) :
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             margin: EdgeInsets.only(left: 8),
                             //color: footer1,

@@ -1,3 +1,5 @@
+import 'package:navkar_tracker/models/mark_location.dart';
+
 import '../models/detail_model.dart';
 import '../models/dmr_model.dart';
 
@@ -6,6 +8,19 @@ import 'dart:convert';
 import 'connection.dart';
 
 class ApiClient {
+
+  Future<MarkLocationModel> getYardDataSummary() async {
+    print("getYardDataSummary URL ========> ${Connection.getYardDataSummary}");
+    var response = await http.get(Uri.parse(Connection.getYardDataSummary));
+    var result = json.decode(response.body);
+
+    MarkLocationModel _markLocation;
+
+    print("_markLocation result $result");
+    _markLocation = (MarkLocationModel.fromJson(result));
+    print('_markLocation details ${_markLocation}');
+    return _markLocation;
+  }
 
   Future<DetailModel> getCFSDetails() async {
     var response = await http.post(Uri.parse(Connection.detailCfs));
@@ -32,8 +47,8 @@ class ApiClient {
   }
 
   Future<DmrModel> getDMRDetails() async {
-    var response = await http.get(Uri.parse(Connection.dmrNew));
-    print("url ${Connection.dmrNew}");
+    var response = await http.get(Uri.parse(Connection.dmr));
+    print("url ${Connection.dmr}");
     var result = json.decode(response.body);
 
     DmrModel _detailDmr;

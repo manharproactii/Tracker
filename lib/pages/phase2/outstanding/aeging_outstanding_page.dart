@@ -249,141 +249,141 @@ class _AegingOutStandingPageState extends State<AegingOutStandingPage> {
                             SizedBox(height: 20,)
                           ],),
                       ) : Container(),
-                      asc.data.responseMessege.messege == null ? Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(left: 5, right: 5),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.green,
-                                border: Border.all(color: Colors.white),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                      flex: 2,
-                                      child: Container(
-                                        child: Text('Range',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                      )
-                                  ),
-                                  Expanded(
-                                      flex: 2,
-                                      child: Container(
-                                        child: Text('Debit',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                      )
-                                  ),
-                                  Expanded(
-                                      flex: 2,
-                                      child: Container(
-                                        child: Text('Credit',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                      )
-                                  ),
-                                  Expanded(
-                                      flex: 2,
-                                      child: Container(
-                                        child: Text('Outstanding',
-                                          style: content1,
-                                          textAlign: TextAlign.center,),
-                                        alignment: Alignment.center,
-                                      )
-                                  ),
-                                  Expanded(
-                                      child: Container(
-                                        alignment: Alignment.center,
-                                      )
-                                  ),
-                                ],
-                              ),
-                            ),
-                            for(int i = 0; i<asc.data.outstandings.length;i++)
-                              Container(
-                                height: 50,
-                                //padding: EdgeInsets.only(left: 2, right: 2),
-                                //margin: EdgeInsets.only(left: 2, right: 2),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Expanded(
-                                        flex: 2,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            color: bg,
-                                            border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                          ),
-                                          child:asc.data.outstandings[i].to.isEmpty ? Text("${asc.data.outstandings[i].from}", style: content1,
-                                            textAlign: TextAlign.center,) : Text("${asc.data.outstandings[i].from} - ${asc.data.outstandings[i].to}", style: content1,
-                                            textAlign: TextAlign.center,),
-                                          alignment: Alignment.center,
-                                        )
-                                    ),
-                                    Expanded(
-                                        flex: 2,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                          ),
-                                          child: Text("${asc.data.outstandings[i].debit}", style: content1,
-                                            textAlign: TextAlign.center,),
-                                          //width: 150,
-                                          //height: 52,
-                                          //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                                          alignment: Alignment.center,
-                                        )
-                                    ),
-                                    Expanded(
-                                        flex: 2,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                          ),
-                                          child: Text("${asc.data.outstandings[i].credit}", style: content1,
-                                            textAlign: TextAlign.center,),
-                                          alignment: Alignment.center,
-                                        )
-                                    ),
-                                    Expanded(
-                                      flex: 2,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                          ),
-                                          child: Text("${asc.data.outstandings[i].outstanding}", style: content1,
-                                            textAlign: TextAlign.center,),
-                                          alignment: Alignment.center,
-                                        )
-                                    ),
-                                    Expanded(
-                                        child: Container(
-                                          alignment: Alignment.center,
-                                          decoration: BoxDecoration(
-                                            border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
-                                          ),
-                                          child: asc.data.outstandings[i].from == "Total" ? Container() : IconButton(
-                                            icon: Icon(Icons.remove_red_eye_outlined, color: Colors.white, size: 18,),
-                                            onPressed: (){
-                                              print("values of from and to ${asc.data.outstandings[i].from} ${asc.data.outstandings[i].to}");
-                                              asc.data.outstandings[i].from == "1 Year Above" ? Navigator.push(context, MaterialPageRoute(builder: (c) => CFSCustomerWiseAgeing(from: asc.data.outstandings[i].from, to: "0"))) : Navigator.push(context, MaterialPageRoute(builder: (c) => CFSCustomerWiseAgeing(from: asc.data.outstandings[i].from, to: asc.data.outstandings[i].to,)));
-                                            },),
-                                        )
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            SizedBox(height: 20,)
-                          ],),
-                      ) : Container(),
+                      // asc.data.responseMessege.messege == null ? Container(
+                      //   padding: EdgeInsets.all(5),
+                      //   margin: EdgeInsets.only(left: 5, right: 5),
+                      //   child: Column(
+                      //     children: [
+                      //       Container(
+                      //         height: 50,
+                      //         decoration: BoxDecoration(
+                      //           color: Colors.green,
+                      //           border: Border.all(color: Colors.white),
+                      //         ),
+                      //         child: Row(
+                      //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //           children: [
+                      //             Expanded(
+                      //                 flex: 2,
+                      //                 child: Container(
+                      //                   child: Text('Range',
+                      //                     style: content1,
+                      //                     textAlign: TextAlign.center,),
+                      //                   alignment: Alignment.center,
+                      //                 )
+                      //             ),
+                      //             Expanded(
+                      //                 flex: 2,
+                      //                 child: Container(
+                      //                   child: Text('Debit',
+                      //                     style: content1,
+                      //                     textAlign: TextAlign.center,),
+                      //                   alignment: Alignment.center,
+                      //                 )
+                      //             ),
+                      //             Expanded(
+                      //                 flex: 2,
+                      //                 child: Container(
+                      //                   child: Text('Credit',
+                      //                     style: content1,
+                      //                     textAlign: TextAlign.center,),
+                      //                   alignment: Alignment.center,
+                      //                 )
+                      //             ),
+                      //             Expanded(
+                      //                 flex: 2,
+                      //                 child: Container(
+                      //                   child: Text('Outstanding',
+                      //                     style: content1,
+                      //                     textAlign: TextAlign.center,),
+                      //                   alignment: Alignment.center,
+                      //                 )
+                      //             ),
+                      //             Expanded(
+                      //                 child: Container(
+                      //                   alignment: Alignment.center,
+                      //                 )
+                      //             ),
+                      //           ],
+                      //         ),
+                      //       ),
+                      //       for(int i = 0; i<asc.data.outstandings.length;i++)
+                      //         Container(
+                      //           height: 50,
+                      //           //padding: EdgeInsets.only(left: 2, right: 2),
+                      //           //margin: EdgeInsets.only(left: 2, right: 2),
+                      //           child: Row(
+                      //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //             children: [
+                      //               Expanded(
+                      //                   flex: 2,
+                      //                   child: Container(
+                      //                     decoration: BoxDecoration(
+                      //                       color: bg,
+                      //                       border: Border(left: BorderSide(color: Colors.white),right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                      //                     ),
+                      //                     child:asc.data.outstandings[i].to.isEmpty ? Text("${asc.data.outstandings[i].from}", style: content1,
+                      //                       textAlign: TextAlign.center,) : Text("${asc.data.outstandings[i].from} - ${asc.data.outstandings[i].to}", style: content1,
+                      //                       textAlign: TextAlign.center,),
+                      //                     alignment: Alignment.center,
+                      //                   )
+                      //               ),
+                      //               Expanded(
+                      //                   flex: 2,
+                      //                   child: Container(
+                      //                     decoration: BoxDecoration(
+                      //                       border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                      //                     ),
+                      //                     child: Text("${asc.data.outstandings[i].debit}", style: content1,
+                      //                       textAlign: TextAlign.center,),
+                      //                     //width: 150,
+                      //                     //height: 52,
+                      //                     //padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                      //                     alignment: Alignment.center,
+                      //                   )
+                      //               ),
+                      //               Expanded(
+                      //                   flex: 2,
+                      //                   child: Container(
+                      //                     decoration: BoxDecoration(
+                      //                       border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                      //                     ),
+                      //                     child: Text("${asc.data.outstandings[i].credit}", style: content1,
+                      //                       textAlign: TextAlign.center,),
+                      //                     alignment: Alignment.center,
+                      //                   )
+                      //               ),
+                      //               Expanded(
+                      //                 flex: 2,
+                      //                   child: Container(
+                      //                     decoration: BoxDecoration(
+                      //                       border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                      //                     ),
+                      //                     child: Text("${asc.data.outstandings[i].outstanding}", style: content1,
+                      //                       textAlign: TextAlign.center,),
+                      //                     alignment: Alignment.center,
+                      //                   )
+                      //               ),
+                      //               Expanded(
+                      //                   child: Container(
+                      //                     alignment: Alignment.center,
+                      //                     decoration: BoxDecoration(
+                      //                       border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
+                      //                     ),
+                      //                     child: asc.data.outstandings[i].from == "Total" ? Container() : IconButton(
+                      //                       icon: Icon(Icons.remove_red_eye_outlined, color: Colors.white, size: 18,),
+                      //                       onPressed: (){
+                      //                         print("values of from and to ${asc.data.outstandings[i].from} ${asc.data.outstandings[i].to}");
+                      //                         asc.data.outstandings[i].from == "1 Year Above" ? Navigator.push(context, MaterialPageRoute(builder: (c) => CFSCustomerWiseAgeing(from: asc.data.outstandings[i].from, to: "0"))) : Navigator.push(context, MaterialPageRoute(builder: (c) => CFSCustomerWiseAgeing(from: asc.data.outstandings[i].from, to: asc.data.outstandings[i].to,)));
+                      //                       },),
+                      //                   )
+                      //               ),
+                      //             ],
+                      //           ),
+                      //         ),
+                      //       SizedBox(height: 20,)
+                      //     ],),
+                      // ) : Container(),
                     ]
                 ),
               );
@@ -405,7 +405,8 @@ class DescriptionView extends StatefulWidget {
 }
 
 class _DescriptionViewState extends State<DescriptionView> {
-  List<String> _detailTypes = ['ICD', 'CFS'];
+  // List<String> _detailTypes = ['ICD', 'CFS'];
+  List<String> _detailTypes = ['ICD',];
   PageController _pageController;
   List<double> _heights;
   int _currentPage = 0;
@@ -452,7 +453,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           child: _currentPage == i ?
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             child: Center(
                               child: Text('${_detailTypes[i]}', style: optionStyle, textAlign: TextAlign.center,),
@@ -460,7 +461,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           ) :
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             margin: EdgeInsets.only(left: 8),
                             //color: footer1,

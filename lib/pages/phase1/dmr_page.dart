@@ -152,106 +152,106 @@ class _DmrPageState extends State<DmrPage> {
                                     alignment: Alignment.topCenter,
                                     child:
 
-                                    Container(
-                                      margin: EdgeInsets.only(left: 10, right: 10),
-                                      child: as.data.responseMessege.messege == null ? Column(
-                                        children: [
-                                          as.data.arrivalTues.isEmpty ? Container() : arrival(as),
-                                          as.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as),
-                                          as.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as),
-                                          as.data.inventory.isEmpty ? Container() : inventory(as),
-                                          as.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as),
-                                          as.data.portPendency.isEmpty ? Container() : portPendency(as),
-                                          as.data.importJoInHand.isEmpty ? Container() : importJoInHand(as),
-                                          as.data.inTransit.isEmpty ? Container() : inTransit(as),
-                                          as.data.joInHand.isEmpty ? Container() : joInHand(as),
-                                        ],
-                                      ) : Container(),
-                                    ),
-                                    // DescriptionView(
-                                    //     children : [
-                                    //       Container(
-                                    //         margin: EdgeInsets.only(left: 10, right: 10),
-                                    //         child: as.data.responseMessege.messege == null ? Column(
-                                    //           children: [
-                                    //             as.data.arrivalTues.isEmpty ? Container() : arrival(as),
-                                    //             as.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as),
-                                    //             as.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as),
-                                    //             as.data.inventory.isEmpty ? Container() : inventory(as),
-                                    //             as.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as),
-                                    //             as.data.portPendency.isEmpty ? Container() : portPendency(as),
-                                    //             as.data.importJoInHand.isEmpty ? Container() : importJoInHand(as),
-                                    //             as.data.inTransit.isEmpty ? Container() : inTransit(as),
-                                    //             as.data.joInHand.isEmpty ? Container() : joInHand(as),
-                                    //           ],
-                                    //         ) : Container(),
-                                    //       ),
-                                    //       Container(
-                                    //         margin: EdgeInsets.only(left: 10, right: 10),
-                                    //         child: asc.data.responseMessege.messege == null ? Column(
-                                    //           children: [
-                                    //             asc.data.arrivalTues.isEmpty ? Container() : arrival(asc),
-                                    //             asc.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(asc),
-                                    //             asc.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(asc),
-                                    //             asc.data.inventory.isEmpty ? Container() : inventory(asc),
-                                    //             asc.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(asc),
-                                    //             asc.data.portPendency.isEmpty ? Container() : portPendency(asc),
-                                    //             asc.data.importJoInHand.isEmpty ? Container() : importJoInHand(asc),
-                                    //             asc.data.inTransit.isEmpty ? Container() : inTransit(asc),
-                                    //             asc.data.joInHand.isEmpty ? Container() : joInHand(asc),
-                                    //           ],
-                                    //         ) : Container(),
-                                    //       ),
-                                    //       Container(
-                                    //         margin: EdgeInsets.only(left: 10, right: 10),
-                                    //         child: as1.data.responseMessege.messege == null ? Column(
-                                    //           children: [
-                                    //             as1.data.arrivalTues.isEmpty ? Container() : arrival(as1),
-                                    //             as1.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as1),
-                                    //             as1.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as1),
-                                    //             as1.data.inventory.isEmpty ? Container() : inventory(as1),
-                                    //             as1.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as1),
-                                    //             as1.data.portPendency.isEmpty ? Container() : portPendency(as1),
-                                    //             as1.data.importJoInHand.isEmpty ? Container() : importJoInHand(as1),
-                                    //             as1.data.inTransit.isEmpty ? Container() : inTransit(as1),
-                                    //             as1.data.joInHand.isEmpty ? Container() : joInHand(as1),
-                                    //           ],
-                                    //         ) : Container(),
-                                    //       ),
-                                    //       Container(
-                                    //         margin: EdgeInsets.only(left: 10, right: 10),
-                                    //         child: as2.data.responseMessege.messege == null ? Column(
-                                    //           children: [
-                                    //             as2.data.arrivalTues.isEmpty ? Container() : arrival(as2),
-                                    //             as2.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as2),
-                                    //             as2.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as2),
-                                    //             as2.data.inventory.isEmpty ? Container() : inventory(as2),
-                                    //             as2.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as2),
-                                    //             as2.data.portPendency.isEmpty ? Container() : portPendency(as2),
-                                    //             as2.data.importJoInHand.isEmpty ? Container() : importJoInHand(as2),
-                                    //             as2.data.inTransit.isEmpty ? Container() : inTransit(as2),
-                                    //             as2.data.joInHand.isEmpty ? Container() : joInHand(as2),
-                                    //           ],
-                                    //         ) : Container(),
-                                    //       ),
-                                    //       Container(
-                                    //         margin: EdgeInsets.only(left: 10, right: 10),
-                                    //         child: as3.data.responseMessege.messege == null ? Column(
-                                    //           children: [
-                                    //             as3.data.arrivalTues.isEmpty ? Container() : arrival(as3),
-                                    //             as3.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as3),
-                                    //             as3.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as3),
-                                    //             as3.data.inventory.isEmpty ? Container() : inventory(as3),
-                                    //             as3.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as3),
-                                    //             as3.data.portPendency.isEmpty ? Container() : portPendency(as3),
-                                    //             as3.data.importJoInHand.isEmpty ? Container() : importJoInHand(as3),
-                                    //             as3.data.inTransit.isEmpty ? Container() : inTransit(as3),
-                                    //             as3.data.joInHand.isEmpty ? Container() : joInHand(as3),
-                                    //           ],
-                                    //         ) : Container(),
-                                    //       ),
-                                    //     ]
+                                    // Container(
+                                    //   margin: EdgeInsets.only(left: 10, right: 10),
+                                    //   child: as.data.responseMessege.messege == null ? Column(
+                                    //     children: [
+                                    //       as.data.arrivalTues.isEmpty ? Container() : arrival(as),
+                                    //       as.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as),
+                                    //       as.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as),
+                                    //       as.data.inventory.isEmpty ? Container() : inventory(as),
+                                    //       as.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as),
+                                    //       as.data.portPendency.isEmpty ? Container() : portPendency(as),
+                                    //       as.data.importJoInHand.isEmpty ? Container() : importJoInHand(as),
+                                    //       as.data.inTransit.isEmpty ? Container() : inTransit(as),
+                                    //       as.data.joInHand.isEmpty ? Container() : joInHand(as),
+                                    //     ],
+                                    //   ) : Container(),
                                     // ),
+                                    DescriptionView(
+                                        children : [
+                                          Container(
+                                            margin: EdgeInsets.only(left: 10, right: 10),
+                                            child: as.data.responseMessege.messege == null ? Column(
+                                              children: [
+                                                as.data.arrivalTues.isEmpty ? Container() : arrival(as),
+                                                as.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as),
+                                                as.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as),
+                                                as.data.inventory.isEmpty ? Container() : inventory(as),
+                                                as.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as),
+                                                as.data.portPendency.isEmpty ? Container() : portPendency(as),
+                                                as.data.importJoInHand.isEmpty ? Container() : importJoInHand(as),
+                                                as.data.inTransit.isEmpty ? Container() : inTransit(as),
+                                                as.data.joInHand.isEmpty ? Container() : joInHand(as),
+                                              ],
+                                            ) : Container(),
+                                          ),
+                                          // Container(
+                                          //   margin: EdgeInsets.only(left: 10, right: 10),
+                                          //   child: asc.data.responseMessege.messege == null ? Column(
+                                          //     children: [
+                                          //       asc.data.arrivalTues.isEmpty ? Container() : arrival(asc),
+                                          //       asc.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(asc),
+                                          //       asc.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(asc),
+                                          //       asc.data.inventory.isEmpty ? Container() : inventory(asc),
+                                          //       asc.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(asc),
+                                          //       asc.data.portPendency.isEmpty ? Container() : portPendency(asc),
+                                          //       asc.data.importJoInHand.isEmpty ? Container() : importJoInHand(asc),
+                                          //       asc.data.inTransit.isEmpty ? Container() : inTransit(asc),
+                                          //       asc.data.joInHand.isEmpty ? Container() : joInHand(asc),
+                                          //     ],
+                                          //   ) : Container(),
+                                          // ),
+                                          // Container(
+                                          //   margin: EdgeInsets.only(left: 10, right: 10),
+                                          //   child: as1.data.responseMessege.messege == null ? Column(
+                                          //     children: [
+                                          //       as1.data.arrivalTues.isEmpty ? Container() : arrival(as1),
+                                          //       as1.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as1),
+                                          //       as1.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as1),
+                                          //       as1.data.inventory.isEmpty ? Container() : inventory(as1),
+                                          //       as1.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as1),
+                                          //       as1.data.portPendency.isEmpty ? Container() : portPendency(as1),
+                                          //       as1.data.importJoInHand.isEmpty ? Container() : importJoInHand(as1),
+                                          //       as1.data.inTransit.isEmpty ? Container() : inTransit(as1),
+                                          //       as1.data.joInHand.isEmpty ? Container() : joInHand(as1),
+                                          //     ],
+                                          //   ) : Container(),
+                                          // ),
+                                          // Container(
+                                          //   margin: EdgeInsets.only(left: 10, right: 10),
+                                          //   child: as2.data.responseMessege.messege == null ? Column(
+                                          //     children: [
+                                          //       as2.data.arrivalTues.isEmpty ? Container() : arrival(as2),
+                                          //       as2.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as2),
+                                          //       as2.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as2),
+                                          //       as2.data.inventory.isEmpty ? Container() : inventory(as2),
+                                          //       as2.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as2),
+                                          //       as2.data.portPendency.isEmpty ? Container() : portPendency(as2),
+                                          //       as2.data.importJoInHand.isEmpty ? Container() : importJoInHand(as2),
+                                          //       as2.data.inTransit.isEmpty ? Container() : inTransit(as2),
+                                          //       as2.data.joInHand.isEmpty ? Container() : joInHand(as2),
+                                          //     ],
+                                          //   ) : Container(),
+                                          // ),
+                                          // Container(
+                                          //   margin: EdgeInsets.only(left: 10, right: 10),
+                                          //   child: as3.data.responseMessege.messege == null ? Column(
+                                          //     children: [
+                                          //       as3.data.arrivalTues.isEmpty ? Container() : arrival(as3),
+                                          //       as3.data.loadedDelivery.isEmpty ? Container() : loadedDelivery(as3),
+                                          //       as3.data.deStuffDelivery.isEmpty ? Container() : deStuffDelivery(as3),
+                                          //       as3.data.inventory.isEmpty ? Container() : inventory(as3),
+                                          //       as3.data.jobOrderReceived.isEmpty ? Container() : jobOrderReceived(as3),
+                                          //       as3.data.portPendency.isEmpty ? Container() : portPendency(as3),
+                                          //       as3.data.importJoInHand.isEmpty ? Container() : importJoInHand(as3),
+                                          //       as3.data.inTransit.isEmpty ? Container() : inTransit(as3),
+                                          //       as3.data.joInHand.isEmpty ? Container() : joInHand(as3),
+                                          //     ],
+                                          //   ) : Container(),
+                                          // ),
+                                        ]
+                                    ),
                                   );
                                 });
                           });
@@ -1768,7 +1768,8 @@ class DescriptionView extends StatefulWidget {
 }
 
 class _DescriptionViewState extends State<DescriptionView> {
-  List<String> _detailTypes = ['ICD', 'CFS', 'NCL-1', 'NCL-2', 'NCL-3'];
+  // List<String> _detailTypes = ['ICD', 'CFS', 'NCL-1', 'NCL-2', 'NCL-3'];
+  List<String> _detailTypes = ['ICD'];
   PageController _pageController;
   List<double> _heights;
   int _currentPage = 0;
@@ -1812,7 +1813,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: _currentPage == i ?
                         Container(
-                          width: 65,
+                          width: MediaQuery.of(context).size.width,
                           height: 30,
                           child: Center(
                             child: Text('${_detailTypes[i]}', style: optionStyle),

@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.navkar_tracker">
+    package="com.example.adani_tracker">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="tracker for GAD"
+        android:label="tracker for Adani ICD Tumb"
         android:name="${applicationName}"
         tools:ignore="AllowBackup"
         android:usesCleartextTraffic="true"

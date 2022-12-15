@@ -175,72 +175,72 @@ class _OverallOutstandingPageState extends State<OverallOutstandingPage> {
                                 SizedBox(height: 20,),
                               ],),
                           ) : Container(),
-                          asc.data.responseMessege.messege == null ? Container(
-                            padding: EdgeInsets.all(5),
-                            child: Column(
-                              children: [
-                                _searchViewCFS(),
-                                Container(
-                                  height: 50,
-                                  //padding: EdgeInsets.only(left: 2, right: 2),
-                                  //margin: EdgeInsets.only(left: 2, right: 2),
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    border: Border.all(color: Colors.white),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                          child: Container(
-                                            child: Text('Sr. No.',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                      Expanded(
-                                          flex: 3,
-                                          child: Container(
-                                            child: Text('Name', style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                      Expanded(
-                                          flex: 2,
-                                          child: Container(
-                                            child: Text('Debit',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                      Expanded(
-                                          flex: 2,
-                                          child: Container(
-                                            child: Text('Credit',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                      Expanded(
-                                          flex: 2,
-                                          child: Container(
-                                            child: Text('Pending',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                          )
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                searchCfs == false ? idcList(overAllDataCFS) : _searchResultCFS.length == 0 ? Container() : idcList(_searchResultCFS),
-                                SizedBox(height: 20,),
-                              ],),
-                          ) : Container(),
+                          // asc.data.responseMessege.messege == null ? Container(
+                          //   padding: EdgeInsets.all(5),
+                          //   child: Column(
+                          //     children: [
+                          //       _searchViewCFS(),
+                          //       Container(
+                          //         height: 50,
+                          //         //padding: EdgeInsets.only(left: 2, right: 2),
+                          //         //margin: EdgeInsets.only(left: 2, right: 2),
+                          //         decoration: BoxDecoration(
+                          //           color: Colors.green,
+                          //           border: Border.all(color: Colors.white),
+                          //         ),
+                          //         child: Row(
+                          //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //           children: [
+                          //             Expanded(
+                          //                 child: Container(
+                          //                   child: Text('Sr. No.',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //             Expanded(
+                          //                 flex: 3,
+                          //                 child: Container(
+                          //                   child: Text('Name', style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //             Expanded(
+                          //                 flex: 2,
+                          //                 child: Container(
+                          //                   child: Text('Debit',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //             Expanded(
+                          //                 flex: 2,
+                          //                 child: Container(
+                          //                   child: Text('Credit',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //             Expanded(
+                          //                 flex: 2,
+                          //                 child: Container(
+                          //                   child: Text('Pending',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,
+                          //                 )
+                          //             ),
+                          //           ],
+                          //         ),
+                          //       ),
+                          //       searchCfs == false ? idcList(overAllDataCFS) : _searchResultCFS.length == 0 ? Container() : idcList(_searchResultCFS),
+                          //       SizedBox(height: 20,),
+                          //     ],),
+                          // ) : Container(),
                         ]
                     ),
                   );
@@ -483,7 +483,8 @@ class DescriptionView extends StatefulWidget {
 }
 
 class _DescriptionViewState extends State<DescriptionView> {
-  List<String> _detailTypes = ['ICD', 'CFS'];
+  // List<String> _detailTypes = ['ICD', 'CFS'];
+  List<String> _detailTypes = ['ICD'];
   PageController _pageController;
   List<double> _heights;
   int _currentPage = 0;
@@ -530,7 +531,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           child: _currentPage == i ?
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width ,
                             height: 30,
                             child: Center(
                               child: Text('${_detailTypes[i]}', style: optionStyle, textAlign: TextAlign.center,),
@@ -538,7 +539,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           ) :
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             margin: EdgeInsets.only(left: 8),
                             //color: footer1,

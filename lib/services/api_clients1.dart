@@ -198,6 +198,7 @@ class ApiClient1 {
     print("CFS Performance $response");
     var result = json.decode(response.body);
     print("CFS result Performance $result");
+    print("CFS result Performance ${Connection.performanceCfs+"?MonthRange=6"}");
 
 
     PerformanceModel _cfsPerformance;

@@ -1,4 +1,4 @@
-package com.example.navkar_tracker
+package com.example.adani_tracker
 
 import io.flutter.embedding.android.FlutterActivity
 

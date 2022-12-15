@@ -257,7 +257,7 @@ class _DashboardAccountState extends State<DashboardAccount>{
                 color: Colors.black54,
                 height: 20,
                 width: double.infinity,
-                child: Text("tracker for GAD  version: $versionName",
+                child: Text("tracker for Navkar  version: $versionName",
                     style:
                     GoogleFonts.montserrat(
                         textStyle: TextStyle(

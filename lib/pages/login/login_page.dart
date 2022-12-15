@@ -46,6 +46,7 @@ class _LoginPageState extends State<LoginPage> with Validator{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bg,
       body: Container(
         alignment: Alignment.center,
         color: bg,
@@ -268,10 +269,37 @@ class _LoginPageState extends State<LoginPage> with Validator{
 
                   ),
                 ),
+
+
               ],
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: Wrap(
+        alignment: WrapAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 40, right: 40),
+            child: Align(
+              // alignment: Alignment.centerLeft,
+              child: Text("Powered by",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Colors.deepPurple.shade100,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400
+                ),),
+            ),
+          ),
+          SizedBox(height: 5,),
+          Container(
+              color: bg,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 5.0),
+                child: Image.asset("assets/adani_logo.png",height: 80,width: 80,),
+              )),
+        ],
       ),
     );
   }
@@ -284,47 +312,41 @@ class _LoginPageState extends State<LoginPage> with Validator{
       pr.style(message: 'Please wait...',
         progressWidget: Center(child: CircularProgressIndicator()),);
       pr.show();
-      var response = await http.post(Uri.parse(Connection.loginNew), body: {
+      print("Connection.login URL========== ${Connection.login}");
+      print("name.text ========== ${name.text}");
+      print("pass.text========== ${pass.text}");
+      var response = await http.post(Uri.parse(Connection.login), body: {
       'LoginID':name.text,
-        'Username':name.text,
       'Password':pass.text
       });
       var results = json.decode(response.body);
-      print('Connection.loginNew == ${Connection.loginNew}');
       print('response == $results  ${response.body}');
-      print('LoginID == ${name.text}');
-      print('Username == ${name.text}');
-      print('Password == ${pass.text}');
       pr.hide();
       if (results['UserID'] != null) {
         
         SharedPreferences preferences = await SharedPreferences.getInstance();
-        preferences.setInt('UserID', results['UserID'] ?? "");
-        preferences.setString('EmpID', results['EmpID'] ?? "");
-        preferences.setString('UserName', results['UserName'] ?? "");
-        preferences.setString('UserType', results['UserType'] ?? "");
-        preferences.setString('DeptType', results['DeptType'] ?? "");
-        preferences.setString('ConCode', results['ConCode'] ?? "");
-        preferences.setString('Role', results['Role'] ?? "");
+        preferences.setInt('UserID', results['UserID']);
+        preferences.setString('EmpID', results['EmpID']);
+        preferences.setString('UserName', results['UserName']);
+        preferences.setString('UserType', results['UserType']);
+        preferences.setString('DeptType', results['DeptType']);
+        preferences.setString('ConCode', results['ConCode']);
+        preferences.setString('Role', results['Role']);
         preferences.setBool('remember', remember);
 
-        // String role = results['Role'];
-        // print("object role $role");
-        // globals.Role = role;
-
-        // String userType = results['UserType'];
-        // print("object userType $userType");
-        // globals.UserType = userType;
+        String role = results['Role'];
+        print("object role $role");
+        globals.Role = role;
 
 
 
-       // if(userType == "Admin"){
+        if(role == "Admin"){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAdmin()), (Route<dynamic> route) => false);
-        // } else if(userType == "Operations"){
-        //   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardOperation()), (Route<dynamic> route) => false);
-        // } else if(userType == "Accounts"){
-        //   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAccount()), (Route<dynamic> route) => false);
-        // }
+        } else if(role == "Operations"){
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardOperation()), (Route<dynamic> route) => false);
+        } else if(role == "Accounts"){
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAccount()), (Route<dynamic> route) => false);
+        }
       } else {
         Alerts.showAlertAndBack(context, "Login Failed", "Incorrect Name or Password");
       }
